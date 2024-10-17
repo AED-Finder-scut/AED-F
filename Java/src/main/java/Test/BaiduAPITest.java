@@ -25,13 +25,6 @@ class ConfigLoader {
     public String getApiKey() {
         return properties.getProperty("baidu.map.ak");
     }
-
-    public static void main(String[] args) {
-        ConfigLoader configLoader = new ConfigLoader();
-        String apiKey = configLoader.getApiKey();
-        System.out.println("百度地图API密钥: " + apiKey);
-        // 你可以在这里继续调用API
-    }
 }
 
 
