@@ -7,7 +7,7 @@ url = "http://api.map.baidu.com/geocoding/v3/"
 params = {
     "address": "广东省广州市华南理工大学大学城校区",
     "output": "json",
-    "ak": "J6XtwF46wVxZyqTIV5REOIyvxrJn7RJp"  # 替换为你的AK
+    "ak": "api"  # 替换为你的AK
 }
 
 # 发送请求
