@@ -1,9 +1,14 @@
 # 基本命令
 ## 可以参考以下执行顺序
+
 - 0.在sync fork处获取主仓库的更新（在github上操作）
+
 ![git步骤1](./imgs/git步骤1.png)
+
 - 1.首先获取远程仓库的修改内容（本地cmd/git bash）
+
 使用git pull <远程仓库的地址> <本地仓库的分支名（默认是origin或者main）>
+
 ![git2](./imgs/git2.png)
 
 ### 接下来是你对代码进行修改

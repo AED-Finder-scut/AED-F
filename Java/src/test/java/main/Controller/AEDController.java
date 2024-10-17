@@ -1,6 +1,6 @@
-package org.example.Controller;
+package main.Controller;
 
-import org.example.entities.AED;
+import main.Entities.AED;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
