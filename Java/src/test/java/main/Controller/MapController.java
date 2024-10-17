@@ -1,4 +1,4 @@
-package org.example.Controller;
+package main.Controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MapController {
 
-    @Value("${baidu.map.api.key}")
+    @Value("${baidu.map.ak}")
     private String baiduMapApiKey;
 
     @GetMapping("/")

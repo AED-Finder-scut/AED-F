@@ -1,3 +1,5 @@
+package main.java.Test;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -10,7 +12,7 @@ class ConfigLoader {
     private Properties properties = new Properties();
 
     public ConfigLoader() {
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("main/resources/config.properties")) {
             if (input == null) {
                 System.out.println("Sorry, unable to find config.properties");
                 return;
