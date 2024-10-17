@@ -3,12 +3,45 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import java.io.InputStream;
+import java.util.Properties;
+
+class ConfigLoader {
+    private Properties properties = new Properties();
+
+    public ConfigLoader() {
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find config.properties");
+                return;
+            }
+            // 加载属性文件
+            properties.load(input);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String getApiKey() {
+        return properties.getProperty("baidu.map.ak");
+    }
+
+    public static void main(String[] args) {
+        ConfigLoader configLoader = new ConfigLoader();
+        String apiKey = configLoader.getApiKey();
+        System.out.println("百度地图API密钥: " + apiKey);
+        // 你可以在这里继续调用API
+    }
+}
+
+
 public class BaiduAPITest {
     public static void main(String[] args) {
         try {
             // 百度地图API的URL
+            ConfigLoader configLoader=new ConfigLoader();
             String address = "广东省广州市华南理工大学大学城校区";
-            String ak = "api";  // 替换为你的AK
+            String ak = configLoader.getApiKey();  // 替换为你的AK
             String url = "http://api.map.baidu.com/geocoding/v3/?address=" + address + "&output=json&ak=" + ak;
 
             // 创建URL对象
