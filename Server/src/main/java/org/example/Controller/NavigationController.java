@@ -1,6 +1,6 @@
-package main.Controller;
+package org.example.Controller;
 
-import main.Config.ConfigLoader;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,13 +15,14 @@ import java.net.URL;
 @RequestMapping("/api/navigation")
 public class NavigationController {
 
+    @Value("${baidu.map.ak}")
+    private String baiduMapApiKey;
+
     @GetMapping("/path")
     public String getNavigationPath(@RequestParam double startLat, @RequestParam double startLon,
                                     @RequestParam double endLat, @RequestParam double endLon) {
-        ConfigLoader configLoader=new ConfigLoader();
-        String ak = configLoader.getApiKey();
         String url = String.format("http://api.map.baidu.com/direction/v2/driving?origin=%f,%f&destination=%f,%f&ak=%s",
-                startLat, startLon, endLat, endLon, ak);
+                startLat, startLon, endLat, endLon, baiduMapApiKey);
         try {
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();

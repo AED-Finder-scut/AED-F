@@ -1,4 +1,4 @@
-package main.Controller;
+package org.example.Controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;

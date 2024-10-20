@@ -1,4 +1,4 @@
-package main.Entities;
+package org.example.entities;
 
 public class AED {
     private Long id;
