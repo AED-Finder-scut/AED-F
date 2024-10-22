@@ -1,3 +1,7 @@
+/*
+* @ aedTable的测试类
+* */
+
 package org.example.DataBase;
 import org.example.DataBase.*;
 import org.example.entities.AED;
