@@ -58,5 +58,17 @@ public class AED {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-    // 构造函数、Getter和Setter
+
+    @Override
+    public String toString() {
+        return "AED{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
+    }
+
+    // 构造函数、Getter和Setter以及用于测试的toString方法
 }
