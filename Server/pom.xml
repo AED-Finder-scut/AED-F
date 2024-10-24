@@ -53,6 +53,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version> <!--mysql驱动，请根据需要选择合适的版本 -->
         </dependency>
+
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.3</version> <!--mybatis依赖项 根据需要选择版本 -->
+        </dependency>
+
     </dependencies>
     <!-->依赖项</-->
 
