@@ -13,15 +13,19 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public void insertUser(User user) {userMapper.insert(user);}
+    public void insertUser(User user) {userMapper.insert(user);}//增加用户
 
-    public void updateUser(User user) {userMapper.update(user);}
+    public void updateUser(User user) {userMapper.update(user);}//更新用户
 
-    public List<User> selectAll(){return userMapper.selectAll();}
+    public void deleteById(int id) {userMapper.deleteById(id);}
 
-    public User selectByid(Integer id){return userMapper.selectById(id);}
+    public void deletrByname(String username){userMapper.deleteByname(username);}
 
-    public User selectByname(String username){return userMapper.selectByname(username);}
+    public List<User> selectAll(){return userMapper.selectAll();}//查找所有用户
+
+    public User selectByid(Integer id){return userMapper.selectById(id);}//根据id查找用户
+
+    public User selectByname(String username){return userMapper.selectByname(username);}//根据用户名查找用户
 
     public User login(User user) {
         User dbuser = selectByname(user.getUsername());
@@ -32,5 +36,5 @@ public class UserService {
             return new User(-2L);
         }
         return dbuser;
-    }
+    }//校验账号密码
 }

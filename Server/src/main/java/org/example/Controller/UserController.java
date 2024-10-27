@@ -22,12 +22,12 @@ public class UserController {
         user = userService.login(user);
         if(user.getUserId() == -1L) {
             return Result.error("账号有误");
-        }
+        }//账号不正确
         else if(user.getUserId() == -2L){
             return Result.error("密码有误");
-        }
+        }//密码不正确
         return Result.success(user);
-    }
+    }//登录操作
 
     @PostMapping("/register")
     public Result register(@RequestBody User user) {
@@ -40,7 +40,10 @@ public class UserController {
         else if(user.getUsername() == null) {
             return Result.error("用户名不能为空");
         }
+        else if(userService.selectByname(user.getUsername()) != null) {
+            return Result.error("用户名已被使用");
+        }
         userService.insertUser(user);
-        return Result.success(user);
-    }
+        return Result.success(null);
+    }//注册操作
 }

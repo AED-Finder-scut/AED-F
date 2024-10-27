@@ -3,7 +3,7 @@ package org.example.entities;
 public class Result {
     private Integer code;
     private String msg;
-    private String data;
+    private User data;
 
     public Result() {
     }
@@ -11,7 +11,7 @@ public class Result {
     public Result(Integer code, String msg, Object data) {
         this.code = code;
         this.msg = msg;
-        this.data = (String)data;
+        this.data = (User)data;
     }
 
     public Integer getCode() {
@@ -30,11 +30,11 @@ public class Result {
         this.msg = msg;
     }
 
-    public String getData() {
+    public User getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(User data) {
         this.data = data;
     }
 
@@ -42,7 +42,7 @@ public class Result {
 
     public static Result success(Object data) {return new Result(1, "success", data);}
 
-    public static Result error(String msg) {return new Result(1,msg,null);}
+    public static Result error(String msg) {return new Result(0, msg,null);}
 
     public String toString() {
         return "Result{code = " + code + ", msg = " + msg + ", data = " + data + "}";

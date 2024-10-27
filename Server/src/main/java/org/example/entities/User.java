@@ -1,10 +1,10 @@
 package org.example.entities;
 
 public class User {
-    private Long userId;
-    private String username;
-    private String userType;
-    private String password;
+    private Long userId;//user_id id
+    private String username;//username 用户名
+    private String userType;//user_type 用户种类
+    private String password;//password 密码
 
 
     public User() {
