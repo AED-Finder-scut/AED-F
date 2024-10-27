@@ -18,6 +18,7 @@
 
     <mappers>
         <mapper class="org.example.mapper.AEDMapper"/><!-->映射文件</-->
+        <mapper class="org.example.mapper.UserMapper"/>
     </mappers>
 </configuration>
 <!-->aed表的mybatis配置文件</-->
