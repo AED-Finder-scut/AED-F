@@ -17,7 +17,7 @@
     </environments>
 
     <mappers>
-        <mapper class="org.example.DataBase.AedTable.AEDMapper"/><!-->映射文件</-->
+        <mapper class="org.example.mapper.AEDMapper"/><!-->映射文件</-->
     </mappers>
 </configuration>
 <!-->aed表的mybatis配置文件</-->

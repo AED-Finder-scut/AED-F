@@ -21,7 +21,7 @@ public class UserService {
 
     public User selectByid(Integer id){return userMapper.selectById(id);}
 
-    public User selectByname(String username){return selectByname(username);}
+    public User selectByname(String username){return userMapper.selectByname(username);}
 
     public User login(User user) {
         User dbuser = selectByname(user.getUsername());
