@@ -1,4 +1,4 @@
-package org.example.DataBase.AedTable;
+package org.example.mapper;
 
 import org.example.entities.AED;
 import org.apache.ibatis.annotations.*;
