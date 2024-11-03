@@ -19,7 +19,7 @@ public class NavigationController {
     @GetMapping("/path")
     public String getNavigationPath(@RequestParam double startLat, @RequestParam double startLon,
                                     @RequestParam double endLat, @RequestParam double endLon) {
-        String url = String.format("https://api.map.baidu.com/direction/v2/driving?origin=%f,%f&destination=%f,%f&ak=%s",
+        String url = String.format("http://api.map.baidu.com/direction/v2/driving?origin=%f,%f&destination=%f,%f&ak=%s",
                 startLat, startLon, endLat, endLon, baiduMapApiKey);
         try {
             URL obj = new URL(url);
