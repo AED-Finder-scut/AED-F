@@ -1,4 +1,4 @@
-package org.example.test;
+package org.example.DataBase.Test;
 
 import org.apache.ibatis.session.SqlSession;
 import org.example.DataBase.AedTable.MyBatisUtils;
