@@ -4,17 +4,16 @@ import org.apache.ibatis.session.SqlSession;
 import org.example.DataBase.AedTable.MyBatisUtils;
 import org.example.entities.AED;
 import org.example.mapper.AEDMapper;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+
+@CrossOrigin(origins = "*") // 允许来自指定域的请求
 @RestController
 @RequestMapping("/api/aed")
 public class AEDController {

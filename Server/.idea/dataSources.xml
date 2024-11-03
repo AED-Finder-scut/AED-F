@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="aed_finder@localhost" uuid="188ca3fb-622b-4fa5-9c90-26329d0c263a">
+    <data-source source="LOCAL" name="aed_finder@rm-7xve3b881209o2q25fo.mysql.rds.aliyuncs.com" uuid="cd69e97b-8661-4b57-9285-c2382400f86d">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/aed_finder</jdbc-url>
-      <jdbc-additional-properties>
-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
-      </jdbc-additional-properties>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="aed_finder@rm-7xve3b881209o2q25fo.mysql.rds.aliyuncs.com" uuid="8ef44883-8f3e-420a-9ea6-887558032006">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-7xve3b881209o2q25fo.mysql.rds.aliyuncs.com:3306/aed_finder</jdbc-url>
       <jdbc-additional-properties>
