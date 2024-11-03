@@ -11,7 +11,7 @@ public class BaiduAPITest {
 // 百度地图API的URL
             String address = "广东省广州市华南理工大学大学城校区";
             String ak = "9kPyMAbnuECcSH2aSP5q30ibB9hjdPbj"; // 替换为你的AK
-            String url = "https://api.map.baidu.com/geocoding/v3/?address=" + address + "&output=json&ak=" + ak;
+            String url = "http://api.map.baidu.com/geocoding/v3/?address=" + address + "&output=json&ak=" + ak;
 
 // 创建URL对象
             URL obj = new URL(url);
