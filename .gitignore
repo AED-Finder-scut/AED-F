@@ -4,3 +4,4 @@ Java/target
 aks.txt
 Java/src/main/resources/config.properties
 Server/target
+Server/.idea
